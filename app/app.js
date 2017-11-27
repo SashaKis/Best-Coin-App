@@ -4,6 +4,7 @@ bestCoinApp.config(function($routeProvider) {
     $routeProvider
     .when("/", {
         templateUrl: "app/home/home.html"
+        //templateUrl: "app/nav/nav.html"
     })
      .when("/login", {
         templateUrl: "app/login/login.html",
