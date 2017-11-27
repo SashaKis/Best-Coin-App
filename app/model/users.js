@@ -18,7 +18,6 @@ bestCoinApp.factory("activeUser", function (User) {
         return user;
     };
 
-
     var isParent = function () {
         if (isLoggedIn) {
             if (user.role === "Parent") {

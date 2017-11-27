@@ -8,6 +8,5 @@ bestCoinApp.factory("Child", function(){
         this.helpFamely = plainObject.helpFamely;
         this.tellSome = plainObject.tellSome;
     };
-
     return Child;
 });

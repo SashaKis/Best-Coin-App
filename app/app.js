@@ -4,20 +4,22 @@ bestCoinApp.config(function($routeProvider) {
     $routeProvider
     .when("/", {
         templateUrl: "app/home/home.html"
-        //templateUrl: "app/nav/nav.html"
     })
      .when("/login", {
-        templateUrl: "app/login/login.html",
-      controller: "appLoginCtrl"
+       templateUrl: "app/login/login.html",
+      controller: "LoginCtrl"
     })
     // .when("/cars/:index", {
-    //     templateUrl: "app/details/carDetails.html",
-    //     controller: "carDetailsCtrl"        
-    // })
-    // .when("/maintenance", {
-    //     templateUrl: "app/maintenance/maintenance.html"    
-    // })   
-    .otherwise({
-        redirectTo: "/"
-      }); 
+    //      templateUrl: "app/details/carDetails.html",
+    //      controller: "carDetailsCtrl"        
+    //  })
+     .when("/parent", {
+         templateUrl: "app/parent/parent.html"    
+     })   
+     .when("/child", {
+        templateUrl: "app/child/child.html"    
+    })   
+    // .otherwise({
+    //     redirectTo: "/"
+    //   }); 
 });
