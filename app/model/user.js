@@ -1,5 +1,5 @@
 // Shared User Constructor
-recipeApp.factory("User", function(){
+bestCoinApp.factory("User", function(){
     function User(plainObject) {
         this.email = plainObject.email;
         this.password = plainObject.password;

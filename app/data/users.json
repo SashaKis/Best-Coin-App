@@ -1,0 +1,26 @@
+[
+    {
+        "email":"sasha.kis@smart-solutions.com",
+        "password": "alex",
+        "firstName":"Alex",
+        "lastName": "Fruchman",
+        "role": "Parent",
+        "data":"app/data/parent.json"
+    },
+    {
+        "email":"lior@prosto.com",
+        "password": "111111",
+        "firstName":"Lior",
+        "lastName": "Fruchman",
+        "role": "Child",
+        "data":"app/data/child-lior.json"
+    },
+    {
+        "email":"annabel@ogogo.com",
+        "password": "123456",
+        "firstName":"Annabell",
+        "lastName": "Fruchman",
+        "role": "Child",
+        "data":"app/data/child-annabel.json"
+    }
+]
