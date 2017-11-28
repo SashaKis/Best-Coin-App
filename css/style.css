@@ -1,9 +1,7 @@
 
 .bg {
-    /* The image used */
-    /* background-image: url('img/demo.jpg'); */
-   background-color: grey;
-    /* Center and scale the image nicely */
-    /* background-repeat: no-repeat;
-    background-position: center; */
-}
+        background: url("img/demo.jpg") no-repeat top center fixed;
+        background-size: 85%;
+        height: 100%;
+        width: 100%;
+    }   
