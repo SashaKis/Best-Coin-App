@@ -8,10 +8,12 @@ bestCoinApp.factory("children", function(Child) {
     var loadAll = function(allDataObjectArr) {
         for (var i = 0; i < allDataObjectArr.length; i++) {
             childArr.push(new Child(allDataObjectArr[i]))
-            console.log(childArr);
+           // console.log(childArr);
         }
     }
-
+    function getChildById(index) {
+        return childArr[index];
+    }
 
   var removeAll = function() {
    childArr = [];
@@ -23,7 +25,7 @@ bestCoinApp.factory("children", function(Child) {
 //         remove: remove,
        loadAll: loadAll,
        getAll: getAll,
-//         get: get,
+       getChildById: getChildById, 
        removeAll: removeAll
    }
 })
