@@ -1,0 +1,16 @@
+// this.mood = plainObject.mood;
+// this.health = plainObject.health;
+// this.achievements = plainObject.achievements;
+// this.goodDeeds = plainObject.goodDeeds;
+// this.helpFamely = plainObject.helpFamely;
+// this.tellSome = plainObject.tellSome
+[
+    {
+        "mood": "5",
+        "health": "4",
+        "achievements": "[Math,Phisic,Logic]",
+        "goodDeeds": "goodDeeds",
+        "helpFamely": "helpFamely",
+        "tellSome": "Lorem ipsum dolor sit amet, in est quando discere comprehensam, id habemus delicata has. Postulant vituperata at pro. Ius fuisset qualisque ex, at pro veri tacimates, ad eam nemore percipitur. Te quo ullum facilis, summo liber laoreet per cu. Sed nibh sanctus an, meis volumus mnesarchum no vis, qui pertinax mandamus perpetua no."
+    }
+]
