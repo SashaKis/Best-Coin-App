@@ -1,21 +1,19 @@
 <coin-Navbar></coin-Navbar>
-{{test}}
 <div class="container">
     <div class="page-header">
         <h1>{{childName}} 's Page</h1>
     </div>
     <form class="form-horizontal" role="form">
         <div class="form-group">
-            <legend>{{childName}} 's Status</legend>
+            <legend>Hello, dear {{childName}}! How was your week?</legend>
         </div>
-        {{Child.mood}}
         <!-- Left Side -->
         <div class="col-sm-12">
             <div class="form-group col-sm-6">
                 <label class="control-label col-sm-4" for="mood">Your mood:</label>
                 <div class="col-sm-8">
-                    <input type="number" class="form-control" id="mood" ng-model="mood" value={{childMood}}>
-
+                    <input type="number" class="form-control" id="mood" ng-model="mood">
+                    <!-- value={{childMood}} -->
                 </div>
                 <label class="control-label col-sm-4" for="health">Your health:</label>
                 <div class="col-sm-8">
@@ -62,6 +60,27 @@
                     Nam dolor nunc, tempor vitae tristique venenatis, semper nec dolor. Morbi scelerisque nunc vitae diam
                     convallis, quis accumsan erat interdum.
                 </p>
+                <label class="control-label col-sm-4" for="achievements">Your Good Deeds:</label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="goods">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <label class="control-label col-sm-4" for="type">Your help to famely:</label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="help2famely">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div>
+                    <img class="img-responsive center-block" src="css/img/2013Brooklynn.jpg" alt="Lior Picture" width="150" height="200">
+                </div>
             </div>
         </div>
     </form>
