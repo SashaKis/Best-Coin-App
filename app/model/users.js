@@ -19,14 +19,14 @@ bestCoinApp.factory("activeUser", function (User) {
     };
 
     var isParent = function () {
-        if (isLoggedIn) {
-            if (user.role === "Parent") {
-                return true;
-            } else {
-                return false
-            }
-        }
-    }
+             if (isLoggedIn) {
+             if (user.role === "Parent") {
+                 return true;
+             } else {
+                 return false
+             }
+         }
+     }
 
     return {
         isLoggedIn: isLoggedIn,

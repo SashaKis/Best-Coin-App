@@ -1,9 +1,9 @@
-bestCoinApp.controller("LoginCtrl", function ($scope, $http, $location, activeUser, User,$log) {
+bestCoinApp.controller("LoginCtrl", function ($rootScope,$scope, $http, $location, activeUser, User, $log) {
 
     // TODO: Detele this
     $scope.email = "sasha@sasha.com";
     $scope.password = "123123";
-    
+
 
     $http.get("app/data/users.json").then(function (response) {
         $scope.users = [];
@@ -15,22 +15,37 @@ bestCoinApp.controller("LoginCtrl", function ($scope, $http, $location, activeUs
     });
 
     $scope.failedAttempt = false;
+    $rootScope.isMaster = false;
 
     $scope.login = function () {
         var user = getLoggedInUser();
         if (user != null) {
             activeUser.login(user);
-            if (activeUser.isParent()) {
-                $log.log("parent"); 
-                $location.path("/parent");
-            } else {
-                $location.path("/child");
+              if (activeUser.isParent()) {
+                  $log.log("parent"); 
+                  $rootScope.isMaster = true;
+                  $log.log($rootScope.isMaster);
+                  $location.path("/parent");
+              } else {
+                $log.log($rootScope.isMaster);  
                 $log.log("child"); 
-            }
+                $location.path("/child");
+              }
         } else {
             $scope.failedAttempt = true;
         }
     }
+    //   $scope.isParent = function () {
+    //       if ($scope.users[i].role === "Parent") {
+    //           $log.log("parent");
+    //           $location.path("/parent");
+    //           return true;
+    //       } else {
+    //           $log.log("children");
+    //           $location.path("/child");
+    //           return false;
+    //       }
+    //   }
 
     var getLoggedInUser = function () {
         for (var i = 0; i < $scope.users.length; i++) {
@@ -43,5 +58,5 @@ bestCoinApp.controller("LoginCtrl", function ($scope, $http, $location, activeUs
 
     // $scope.dismiss = function () {
     //     $uibModalInstance.close("User dismissed");
-   //}
+    //}
 });
