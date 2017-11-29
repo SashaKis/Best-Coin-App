@@ -1,18 +1,21 @@
 <coin-Navbar></coin-Navbar>
 
 <div class="container">
-    <h1>Hello Child Page</h1>
+    <div class="page-header">
+        <h1>{{childName}} 's Page</h1>
+    </div>
     <form class="form-horizontal" role="form">
         <div class="form-group">
-            <legend>Child Status</legend>
+            <legend>{{childName}} 's Status</legend>
         </div>
-
+        {{Child.mood}}
         <!-- Left Side -->
         <div class="col-sm-12">
             <div class="form-group col-sm-6">
                 <label class="control-label col-sm-4" for="mood">Your mood:</label>
                 <div class="col-sm-8">
                     <input type="number" class="form-control" id="mood" ng-model="mood">
+
                 </div>
                 <label class="control-label col-sm-4" for="health">Your health:</label>
                 <div class="col-sm-8">
@@ -47,7 +50,7 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
-            
+
             <!-- Rigth Side -->
             <div class="col-sm-6">
                 <p>test2</p>
@@ -62,5 +65,4 @@
             </div>
         </div>
     </form>
-
 </div>
