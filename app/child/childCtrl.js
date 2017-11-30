@@ -18,4 +18,25 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         $scope.childMood = $scope.childArr[0].mood;
         $log.log($scope.childMood);
     });
+
+    $scope.slider = document.getElementById("myMood");
+    $scope.output = document.getElementById("childmood");
+    $scope.output.innerHTML = $scope.slider.value;
+    //$log.log($scope.slider.value)
+
+    $scope.slider.oninput = function () {
+        $scope.output.innerHTML = this.value;
+    }
+
+
+    // var cuisines = ["Chinese","Indian"];     
+    
+    // var sel = document.getElementById('CuisineList');
+    // for(var i = 0; i < cuisines.length; i++) {
+    //     var opt = document.createElement('option');
+    //     opt.innerHTML = cuisines[i];
+    //     opt.value = cuisines[i];
+    //     sel.appendChild(opt);
+    // }
+    
 });
