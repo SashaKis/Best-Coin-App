@@ -6,7 +6,7 @@ bestCoinApp.factory("User", function(){
         this.firstName = plainObject.firstName;
         this.lastName = plainObject.lastName;
         this.role = plainObject.role;
-        this.data = plainObject.data;
+        this.dataURL = plainObject.dataURL;
     };
 
     return User;

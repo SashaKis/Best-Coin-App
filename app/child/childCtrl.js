@@ -11,11 +11,13 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
     $scope.childArr = [];
 
     //http call to get data from json
-    $http.get("app/data/children.json").then(function (response) {
+    $scope.kidDataURL = activeUser.get().dataURL;
+    $log.log($scope.kidDataURL);
+    $http.get($scope.kidDataURL).then(function (response) {
         children.loadAll(response.data);
         //$log.log(children.getAll());
         $scope.childArr = children.getAll();
-        $scope.childMood = $scope.childArr[0].mood;
+        $scope.childMood = $scope.childArr[$scope.childArr.length-1].mood;
         $log.log($scope.childMood);
     });
 

@@ -7,7 +7,7 @@ bestCoinApp.factory("children", function(Report) {
 
     var loadAll = function(allDataObjectArr) {
         for (var i = 0; i < allDataObjectArr.length; i++) {
-            childArr.push(new Child(allDataObjectArr[i]))
+            childArr.push(new Report(allDataObjectArr[i]))
            // console.log(childArr);
         }
     }
