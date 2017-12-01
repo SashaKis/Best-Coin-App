@@ -19,6 +19,8 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         $scope.childArr = children.getAll();
         $scope.childMood = $scope.childArr[$scope.childArr.length-1].mood;
         $log.log($scope.childMood);
+        $scope.subjects = $scope.childArr[$scope.childArr.length-1].subjects;
+        $log.log($scope.subjects);
     });
 
     $scope.slider = document.getElementById("myMood");

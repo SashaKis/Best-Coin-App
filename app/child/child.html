@@ -17,9 +17,6 @@
                      value={{childMood}} 
                 </div> -->
 
-
-
-
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myMood">Your mood:</label>
                     <input type="range" min="0" max="10" value="5" class="slider" id="myMood">
@@ -47,20 +44,7 @@
                     <label class="control-label col-sm-4" for="achievements">Achievements:</label>
                     <div class="col-sm-8">
                         <select class="form-control" id="achievements">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </div>
-
-                    <label class="control-label col-sm-4" for="type">Type:</label>
-                    <div class="col-sm-8">
-                        <select class="form-control" id="type">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                                <option ng-repeat="subj in subjects">{{subj}}</option>
                         </select>
                     </div>
                 </div>
