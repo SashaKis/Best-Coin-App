@@ -1,6 +1,6 @@
-// Shared Child Constructor
-bestCoinApp.factory("Child", function(){
-    function Child(plainObject) {
+// Shared Report Constructor
+bestCoinApp.factory("Report", function(){
+    function Report(plainObject) {
         this.mood = plainObject.mood;
         this.health = plainObject.health;
         this.achievements = plainObject.achievements;
@@ -9,5 +9,5 @@ bestCoinApp.factory("Child", function(){
         this.tellSome = plainObject.tellSome;
         this.imgURL = plainObject.imgURL;
     };
-    return Child;
+    return Report;
 });

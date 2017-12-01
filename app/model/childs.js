@@ -1,4 +1,4 @@
-bestCoinApp.factory("children", function(Child) {
+bestCoinApp.factory("children", function(Report) {
     var childArr = [];
 
     function getAll() {

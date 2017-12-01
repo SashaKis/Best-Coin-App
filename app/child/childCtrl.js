@@ -1,4 +1,4 @@
-bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, activeUser, Child, children) {
+bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, activeUser, Report, children) {
      $scope.test = "test data";
     //$scope.mood = "5"
     //http call to get data from json
