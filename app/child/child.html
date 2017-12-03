@@ -28,26 +28,31 @@
                     </p>
                 </div>
 
-                <div class="col-sm-12">
-                    <label class="control-label col-sm-4" for="achievements">Achievements:</label>
-                    <div class="col-sm-8">
-                        <select class="form-control" id="achievements">
-                            <option ng-repeat="subj in subjects">{{subj}}</option>
-                        </select>
-                    </div>
-                </div>
-                <label class="control-label col-sm-4" for="score">Your score:</label>
-                <div class="col-sm-8">
-                    <input type="number" class="form-control" id="score" ng-model="score">
-                </div>
-                <div class="col-sm-10 col-sm-offset-2">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+                <form aclass="form-inline" role="form">
+                    <fieldset>
+                        <legend>Results</legend>
+                        <div class="col-sm-6">
+                            <label class="control-label" for="achievements">Achievements:</label>
+                            <select class="form-control" id="achievements">
+                                <option ng-repeat="subj in subjects">{{subj}}</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="control-label" for="score">Your score:</label>
+                            <input type="number" class="form-control" id="score" ng-model="score">
+                        </div>
+                        <div class="col-sm-2 ">
+                            <p>
+                                <br>
+                            </p>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
 
             <!-- Rigth Side -->
             <div class="col-sm-6">
-                <p>test2</p>
                 <label class="control-label col-sm-4" for="achievements">Your Good Deeds:</label>
                 <div class="col-sm-8">
                     <select class="form-control" id="goods">
@@ -65,16 +70,18 @@
                         <option>3</option>
                         <option>4</option>
                     </select>
-                </div>.<p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare lobortis euismod. Sed felis ante, condimentum at tortor
-                    in, lobortis maximus lectus. Nam non efficitur orci. Donec odio tellus, vestibulum sed lectus nec, euismod
-                    vestibulum enim. Nullam ultrices ac lorem in gravida. Vivamus ac vestibulum metus, ac rutrum ligula.
-                    Donec vulputate elit in aliquet auctor. Integer vitae sapien nibh. Suspendisse blandit condimentum ultricies.
-                    Nam dolor nunc, tempor vitae tristique venenatis, semper nec dolor. Morbi scelerisque nunc vitae diam
-                    convallis, quis accumsan erat interdum.
-                </p>
+                </div>
+                <div class="col-sm-1"></div>
+                <form class="col-sm-11">
+                    <h3>Do you want to tell us something?</h3>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" cols="30" maxlength="150" id="comment"></textarea>
+                    </div>
+                </form>
+
                 <div>
-                    <img class="img-responsive center-block" src="css/img/2013Brooklynn.jpg" alt="Lior Picture" width="150" height="200">
+                    <legend>Add new Picture</legend>
+                    <img class="img-responsive center-block" src="css/img/photocamera.png" alt="Lior Picture" width="150" height="200">
                 </div>
             </div>
         </div>
