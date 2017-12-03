@@ -1,7 +1,7 @@
 
-.bg{
-        background: url('css/img/coins.png') no-repeat top center fixed;
-        background-size: 55%;
+.bg {
+    background: url('css/img/coins.png') no-repeat top center fixed;
+        background-size: 85%;
         height: 100%;
         width: 100%;
     }  
@@ -58,7 +58,7 @@
       width: 33%;
         margin: auto;
     }
-    #gallerysearch[type=text] {
+    #gallerysearch/*[type=text]*/{
         width: 130px;
         box-sizing: border-box;
         border: 2px solid #ccc;
@@ -66,6 +66,7 @@
         font-size: 16px;
         background-color: white;
         background-image: url('css/img/searchpic.png');
+        background-size: 55%;
         background-position: 10px 10px;
         background-repeat: no-repeat;
         padding: 12px 20px 12px 40px;
@@ -73,7 +74,7 @@
         transition: width 0.4s ease-in-out;
       }
 
-      #gallerysearch[type=text]:focus {
+      #gallerysearch/*[type=text]*/:focus {
         width: 100%;
       }
 
@@ -82,4 +83,21 @@
     }
     .headername2{
         font-family: 'Pacifico', cursive; font-size: 24px;
+    }
+    .winner{
+        background-color: black;
+        border: 5px solid rgb(255, 217, 0);
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .winnercontent{
+        position: relative;
+    }
+    .congratulations{
+        position: absolute;
+        margin: auto;
+        top: 35%; 
+        color: white;
+        font-family: 'Archivo Black', sans-serif; font-size: 32px;
+
     }

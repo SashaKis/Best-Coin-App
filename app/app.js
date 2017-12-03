@@ -32,6 +32,10 @@ bestCoinApp.config(function ($routeProvider) {
             templateUrl: "app/winner/winner.html"
             //controller: "ChildCtrl"
         })
+        .when("/plans", {
+            templateUrl: "app/plans/plans.html"
+            //controller: "ChildCtrl"
+        })
     // .otherwise({
     //     redirectTo: "/"
     //   }); 
