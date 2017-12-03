@@ -1,3 +1,4 @@
+<coin-Header></coin-Header>
 <coin-Navbar></coin-Navbar>
 <div class="container">
     <div class="page-header">
@@ -10,56 +11,35 @@
         <!-- Left Side -->
         <div class="col-sm-12">
             <div class="form-group col-sm-6">
-                <!-- <label class="control-label col-sm-4" for="mood">Your mood:</label>
-                <div class="col-sm-8">
-                    <input type="number" class="form-control" id="mood" ng-model="mood">
-                     value={{childMood}} 
-                </div> -->
-
-
-
-
+                <!--Slider mood-->
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myMood">Your mood:</label>
                     <input type="range" min="0" max="10" value="5" class="slider" id="myMood">
-                    <p>Value:<span id="childmood"></span></p>
+                    <p>Value:
+                        <span id="childmood"></span>
+                    </p>
+                </div>
+                <!--Slider health-->
+                <div id="slidecontainer form-group col-sm-6">
+                    <label class="control-label col-sm-4" for="myhealth">Your health:</label>
+                    <input type="range" min="0" max="10" value="7" class="slider" id="myhealth">
+                    <p>Value:
+                        <span id="childhealth"></span>
+                    </p>
                 </div>
 
-                <!-- <script>
-                    var slider = document.getElementById("myMood");
-                    var output = document.getElementById("childmood");
-                    output.innerHTML = slider.value;
-
-                    slider.oninput = function () {
-                        output.innerHTML = this.value;
-                    }
-                </script> -->
-
-
+<!-- 
                 <label class="control-label col-sm-4" for="health">Your health:</label>
                 <div class="col-sm-8">
                     <input type="number" class="form-control" id="health" ng-model="health">
-                </div>
+                </div> -->
 
 
                 <div class="col-sm-12">
                     <label class="control-label col-sm-4" for="achievements">Achievements:</label>
                     <div class="col-sm-8">
                         <select class="form-control" id="achievements">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </div>
-
-                    <label class="control-label col-sm-4" for="type">Type:</label>
-                    <div class="col-sm-8">
-                        <select class="form-control" id="type">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                            <option ng-repeat="subj in subjects">{{subj}}</option>
                         </select>
                     </div>
                 </div>

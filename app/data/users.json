@@ -5,7 +5,7 @@
         "firstName":"Alex",
         "lastName": "Fruchman",
         "role": "Parent",
-        "data":"app/data/parent.json"
+        "dataURL":"app/data/kids.json"
     },
     {
         "email":"lior@prosto.com",
@@ -13,14 +13,14 @@
         "firstName":"Lior",
         "lastName": "Fruchman",
         "role": "Child",
-        "data":"app/data/child-lior.json"
+        "dataURL":"app/data/lior.json"
     },
     {
         "email":"annabel@ogogo.com",
         "password": "123456",
-        "firstName":"Annabell",
+        "firstName":"Annabel",
         "lastName": "Fruchman",
         "role": "Child",
-        "data":"app/data/child-annabel.json"
+        "dataURL":"app/data/annabel.json"
     }
 ]
