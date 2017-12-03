@@ -26,7 +26,7 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
     $scope.sliderMood = document.getElementById("myMood");
     $scope.outputMood = document.getElementById("childmood");
     $scope.outputMood.innerHTML = $scope.sliderMood.value;
-     $scope.sliderMood.oninput = function () {
+    $scope.sliderMood.oninput = function () {
          $scope.outputMood.innerHTML = this.value;
      }
 
@@ -36,8 +36,12 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
     $scope.slider.oninput = function () {
         $scope.output.innerHTML = this.value;
     }
-
-
+    $scope.sub_score = function() {
+        $scope.x = document.getElementById("achievements").options.selectedIndex;
+        $log.log($scope.x);
+        $log.log($scope.score.value);
+    };
+   
     // var cuisines = ["Chinese","Indian"];     
 
     // var sel = document.getElementById('CuisineList');
