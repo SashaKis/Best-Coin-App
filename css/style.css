@@ -1,8 +1,8 @@
 
 .bg{
         background: url('img/coins.png') no-repeat top center fixed;
-        background-size: 55%;
-        height: 100%;
+        background-size: 83%;
+        /* height: 90%; */
         width: 100%;
     }  
     #slidecontainer {

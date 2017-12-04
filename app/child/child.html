@@ -34,8 +34,8 @@
                         <legend>Results</legend>
                         <div class="col-sm-6">
                             <label class="control-label" for="achievements">Achievements:</label>
-                            <select class="form-control" id="achievements">
-                                <option ng-repeat="subj in subjects">{{subj}}</option>
+                            <select class="form-control" id="achievements" ng-model="selectedLesson">
+                                <option ng-repeat="subj in subjects" value={{$index}}>{{subj}}</option>
                             </select>
                         </div>
                         <div class="col-sm-4">
@@ -49,6 +49,10 @@
                             <button type="button" class="btn btn-primary" ng-click="sub_score()">Submit</button>
                         </div>
                     </fieldset>
+                    <div class="col-sm-4">
+                        <label class="control-label" for="avg">Your average:</label>
+                        <input type="number" class="form-control" id="avg" value={{average}} ng-model="avg.value">
+                    </div>
                 </form>
             </div>
 
