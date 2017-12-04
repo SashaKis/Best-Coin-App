@@ -1,14 +1,8 @@
 
-<<<<<<< HEAD
-.bg {
-    background: url('img/coins.png') no-repeat top center fixed;
-        background-size: 95%;
-=======
 .bg{
         background: url('img/coins.png') no-repeat top center fixed;
         background-size: 95%;
         /* height: 90%; */
->>>>>>> 12c8054811bc622d93df0b5ab44381b517422e8a
         width: 100%;
     }  
     #slidecontainer {
