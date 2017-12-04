@@ -18,17 +18,17 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         //$log.log(children.getAll());
         $scope.childArr = children.getAll();
         $scope.childMood = $scope.childArr[$scope.childArr.length - 1].mood;
-        $log.log($scope.childMood);
+        //$log.log($scope.childMood);
         $scope.subjects = $scope.childArr[$scope.childArr.length - 1].subjects;
-        $log.log($scope.subjects);
+        //$log.log($scope.subjects);
     });
 
     $scope.sliderMood = document.getElementById("myMood");
     $scope.outputMood = document.getElementById("childmood");
     $scope.outputMood.innerHTML = $scope.sliderMood.value;
-     $scope.sliderMood.oninput = function () {
-         $scope.outputMood.innerHTML = this.value;
-     }
+    $scope.sliderMood.oninput = function () {
+        $scope.outputMood.innerHTML = this.value;
+    }
 
     $scope.slider = document.getElementById("myhealth");
     $scope.output = document.getElementById("childhealth");
@@ -36,16 +36,28 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
     $scope.slider.oninput = function () {
         $scope.output.innerHTML = this.value;
     }
+    $scope.result = {};
+    $scope.sub_score = function () {
+        //$scope.x = document.getElementById("achievements").options.selectedIndex;
+        $scope.x = $scope.selectedLesson;
+        //$log.log($scope.x);
+        //$log.log($scope.score.value);
+        $scope.result[$scope.x] = $scope.score.value;
+        //$log.log($scope.result);
+        $scope.avg = 0;
+        for (key in $scope.result) {
+            $log.log($scope.result[key]);
+            var keys = (Object.keys($scope.result));
+            var len = keys.length;
+            $log.log(len);
+            $scope.avg +=$scope.result[key];
+            $log.log($scope.avg / len);
+            $scope.average = $scope.avg / len;
+        }
 
 
-    // var cuisines = ["Chinese","Indian"];     
+       
+    };
 
-    // var sel = document.getElementById('CuisineList');
-    // for(var i = 0; i < cuisines.length; i++) {
-    //     var opt = document.createElement('option');
-    //     opt.innerHTML = cuisines[i];
-    //     opt.value = cuisines[i];
-    //     sel.appendChild(opt);
-    // }
 
 });

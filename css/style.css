@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
 .bg {
     background: url('img/coins.png') no-repeat top center fixed;
         background-size: 95%;
+=======
+.bg{
+        background: url('img/coins.png') no-repeat top center fixed;
+        background-size: 83%;
+        /* height: 90%; */
+>>>>>>> 12c8054811bc622d93df0b5ab44381b517422e8a
         width: 100%;
     }  
     #slidecontainer {
@@ -72,8 +79,7 @@
         font-size: 16px;
         background-color: white;
         background-image: url('img/searchpic.png');
-        background-size: 75%;
-        /*background-position: 10px 20px;*/
+        background-position: 10px 10px;
         background-repeat: no-repeat;
         padding: 12px 20px 12px 40px;
         -webkit-transition: width 0.4s ease-in-out;
