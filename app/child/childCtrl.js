@@ -15,13 +15,17 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         children.loadAll(response.data);
         //$log.log(children.getAll());
         $scope.childArr = children.getAll();
-        $scope.childMood = $scope.childArr[$scope.childArr.length - 1].mood;
-        //$log.log($scope.childMood);
+        $scope.childmood = $scope.childArr[$scope.childArr.length - 1].mood;
+        //$log.log($scope.childmood);
+        $scope.childhealth = $scope.childArr[$scope.childArr.length - 1].health;
+        //$log.log($scope.childhealth);
         $scope.subjects = $scope.childArr[$scope.childArr.length - 1].subjects;
         //$log.log($scope.subjects);
     });
-    $index = 1;
 
+
+
+    //$index = 1;  
     $scope.sliderMood = document.getElementById("myMood");
     $scope.outputMood = document.getElementById("childmood");
     $scope.outputMood.innerHTML = $scope.sliderMood.value;
@@ -31,24 +35,23 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
 
     $scope.slider = document.getElementById("myhealth");
     $scope.output = document.getElementById("childhealth");
-    $log.log($scope.childhealth.value);
+    //$log.log($scope.childhealth);
     $scope.output.innerHTML = $scope.slider.value;
     $scope.slider.oninput = function () {
         $scope.output.innerHTML = this.value;
     }
     $scope.kidData = [];
     $scope.sendData = function () {
-        $scope.kidData[$scope.childmood, $scope.childhealth];
-        $log.log($scope.kidData);
-        //$scope.cars = cars.getAll();
+        children.addReport(new Report($scope.childmood, $scope.childhealth, $scope.average));
+        $scope.childArr = children.getAll();
+        $log.log($scope.childArr)
     }
+
 
     $scope.result = {};
     $scope.sub_score = function () {
         //$scope.x = document.getElementById("achievements").options.selectedIndex;
         $scope.x = $scope.selectedLesson;
-        //$log.log($scope.x);
-        //$log.log($scope.score.value);
         $scope.result[$scope.x] = $scope.score.value;
         //$log.log($scope.result);
         $scope.avg = 0;
@@ -65,6 +68,7 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         $scope.subj_change = function () {
             $scope.score.value = 0;
         }
+
     };
 
 

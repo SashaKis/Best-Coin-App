@@ -14,7 +14,7 @@
                 <!--Slider mood-->
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myMood">Your mood:</label>
-                    <input type="range" min="0" max="10" value="5" class="slider" id="myMood">
+                    <input type="range" min="0" max="10" value={{childmood}} class="slider" id="myMood">
                     <p>Value:
                         <span id="childmood"></span>
                     </p>
@@ -22,7 +22,7 @@
                 <!--Slider health-->
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myhealth">Your health:</label>
-                    <input type="range" min="0" max="10" value={{$childhealth}} class="slider" id="myhealth">
+                    <input type="range" min="0" max="10" value={{childhealth}} class="slider" id="myhealth">
                     <p>Value:
                         <span id="childhealth"></span>
                     </p>
@@ -35,7 +35,7 @@
                         <div class="col-sm-6">
                             <label class="control-label" for="achievements">Achievements:</label>
                             <select class="form-control" id="achievements" ng-change="subj_change()" ng-model="selectedLesson">
-                                <option ng-repeat="subj in subjects" value={{$index}}>{{subj}}</option>
+                                <option ng-repeat="subj in subjects">{{subj}}</option>
                             </select>
                         </div>
                         <div class="col-sm-4">
