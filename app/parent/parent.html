@@ -1,9 +1,41 @@
 <coin-Header></coin-Header>
 <coin-Navbar></coin-Navbar>
-<h1>Hello Parent Page</h1>
-<aside>
 
-</aside>
-<main>
-    
-</main>
+
+<div class="container-fluid">
+    <!-- Left Side -->
+    <aside class="col-sm-2">
+        <div>
+            <label class="control-label" for="kidName">Child Name:</label>
+            <select class="form-control" id="kidName" ng-model="selectedName" ng-change="kidNameSelect()">
+                <option ng-repeat="name in kidsName">{{name}}</option>
+            </select>
+        </div>
+    </aside>
+
+    <!-- Main Window -->
+    <main class="col-sm-8">
+        <!-- <h4>{{kidReport}}</h4> -->
+        <form class="form-inline" role="form">
+            <fieldset>
+                <legend>{{selectedName}}</legend>
+                <div class="form-group col-sm-6">
+                    <label class="control-label" for="mymood">Mood :</label>
+                    <input type="number" class="form-control" id="mymood" value="{{}}">
+                </div>
+                
+                <div class="form-group col-sm-6">
+                    <label class="control-label" for="myhealth">Health :</label>
+                    <input type="number" class="form-control" id="myhealth" value="{{}}">
+                </div>
+            </fieldset>
+        </form>
+
+
+    </main>
+
+    <!-- Right Side -->
+    <aside class="col-sm-2">
+
+    </aside>
+</div>
