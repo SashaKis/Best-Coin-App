@@ -5,6 +5,7 @@ bestCoinApp.factory("Report", function(){
         this.health = plainObject.health;
         this.subjects = plainObject.subjects;
         this.results = plainObject.results;
+        this.average = plainObject.average;
         this.goodDeeds = plainObject.goodDeeds;
         this.helpFamely = plainObject.helpFamely;
         this.tellSome = plainObject.tellSome;
