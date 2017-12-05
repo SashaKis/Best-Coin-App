@@ -32,10 +32,12 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
             $scope.kidReportfile ="No Report data file"
         }
         $log.log($scope.kidReportfile)
-        
         $http.get($scope.kidReportfile).then(function (response) { 
             $scope.kidReport = response.data;
             $log.log($scope.kidReport);
+           $scope.kidmood = $scope.kidReport[$scope.kidReport.length - 1].mood;
+           //$log.log($scope.kidmood);
+           $scope.kidhealth = $scope.kidReport[$scope.kidReport.length - 1].health;
         }); 
     }
 
