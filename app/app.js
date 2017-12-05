@@ -14,7 +14,8 @@ bestCoinApp.config(function ($routeProvider) {
         //      controller: "carDetailsCtrl"        
         //  })
         .when("/parent", {
-            templateUrl: "app/parent/parent.html"
+            templateUrl: "app/parent/parent.html",
+            controller: "ParentCtrl"
         })
         .when("/child", {
             templateUrl: "app/child/child.html",

@@ -1,10 +1,10 @@
 bestCoinApp.controller("LoginCtrl", function ($rootScope,$scope, $http, $location, activeUser, User, $log) {
 
     // TODO: Detele this
-    //$scope.email = "sasha@sasha.com";
-    //$scope.password = "123123";
-    $scope.email = "lior@prosto.com";
-    $scope.password = "111111";
+    $scope.email = "sasha@sasha.com";
+    $scope.password = "123123";
+    //$scope.email = "lior@prosto.com";
+    //$scope.password = "111111";
 
     $http.get("app/data/users.json").then(function (response) {
         $scope.users = [];
