@@ -53,7 +53,6 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         //$scope.x = document.getElementById("achievements").options.selectedIndex;
         $scope.x = $scope.selectedLesson;
         $scope.result[$scope.x] = $scope.score.value;
-        //$log.log($scope.result);
         $scope.avg = 0;
         for (key in $scope.result) {
             //$log.log($scope.result[key]);

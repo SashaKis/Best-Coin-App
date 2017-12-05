@@ -39,7 +39,7 @@
                         <br>
                     </p>
                     <label class="control-label col-sm-3" for="achievements">Subjects:</label>
-                    <select class="form-control col-sm-6" id="achievements" ng-model="selectedLesson">
+                    <select class="form-control col-sm-6" id="achievements" ng-change="subjectChange()" ng-model="selectedLesson">
                         <option ng-repeat="subj in subjects">{{subj}}</option>
                     </select>
                 </div>

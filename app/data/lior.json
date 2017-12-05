@@ -3,7 +3,7 @@
         "mood": "8",
         "health": "4",
         "subjects": ["Math","Phisic","Logic","Tanah","Lashon"],
-        "results":[],
+        "results":[65,55,98,75,80],
         "average":"65",
         "goodDeeds": ["goodDeeds1","goodDeeds2"],
         "helpFamely": ["helpFamely1","helpFamely2"],

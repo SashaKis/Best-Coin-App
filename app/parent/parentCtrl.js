@@ -20,7 +20,7 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
         //$log.log($scope.kidsName);
     });
     $scope.kidNameSelect = function () {
-        $log.log($scope.selectedName)
+        // $log.log($scope.selectedName)
         switch ($scope.selectedName) {
             case "Lior":
                 $scope.kidReportfile = "app/data/lior.json"
@@ -29,24 +29,26 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
                 $scope.kidReportfile = "app/data/annabel.json"
                 break;
             default:
-            $scope.kidReportfile ="No Report data file"
+                $scope.kidReportfile = "No Report data file"
         }
-       //$log.log($scope.kidReportfile)
-        $http.get($scope.kidReportfile).then(function (response) { 
+        $http.get($scope.kidReportfile).then(function (response) {
             $scope.kidReport = response.data;
-            //$log.log($scope.kidReport);
-           $scope.kidmood = $scope.kidReport[$scope.kidReport.length - 1].mood;
-           //$log.log($scope.kidmood);
-           $scope.kidhealth = $scope.kidReport[$scope.kidReport.length - 1].health;
-           $scope.subjects = $scope.kidReport[$scope.kidReport.length - 1].subjects;
-           //$log.log($scope.subjects)
-           $scope.average = $scope.kidReport[$scope.kidReport.length - 1].average;
-           $scope.goodDeeds = $scope.kidReport[$scope.kidReport.length - 1].goodDeeds;
-           //$log.log($scope.goodDeeds)
-           $scope.helpFamely = $scope.kidReport[$scope.kidReport.length - 1].helpFamely;
-           //$log.log($scope.helpFamely)
-           $scope.tellSome = $scope.kidReport[$scope.kidReport.length - 1].tellSome;
-        }); 
+            $scope.kidmood = $scope.kidReport[$scope.kidReport.length - 1].mood;
+            $scope.kidhealth = $scope.kidReport[$scope.kidReport.length - 1].health;
+            $scope.subjects = $scope.kidReport[$scope.kidReport.length - 1].subjects;
+            $scope.average = $scope.kidReport[$scope.kidReport.length - 1].average;
+            $scope.results = $scope.kidReport[$scope.kidReport.length - 1].results;
+            $scope.goodDeeds = $scope.kidReport[$scope.kidReport.length - 1].goodDeeds;
+            $scope.helpFamely = $scope.kidReport[$scope.kidReport.length - 1].helpFamely;
+            $scope.tellSome = $scope.kidReport[$scope.kidReport.length - 1].tellSome;
+        });
     }
-
+    $scope.subjectChange = function () {
+        //$scope.x = $scope.selectedLesson.$index;
+        //$scope.x = document.getElementById("achievements").options.selectedIndex;
+        $scope.x = $scope.selectedLesson.options;
+        //$scope.score =  $scope.kidReport[$scope.x].results;
+        $log.log($scope.x);
+        $log.log($scope.score);
+    }
 });
