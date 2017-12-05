@@ -4,9 +4,9 @@
         "health": "5",
         "subjects": ["Logic","Tanah","Lashon"],
         "results":[],
-        "average":"0",
-        "goodDeeds": "goodDeeds",
-        "helpFamely": "helpFamely",
+        "average":"99",
+        "goodDeeds": ["goodDeeds1","goodDeeds2"],
+        "helpFamely": ["helpFamely1","helpFamely2"],
         "tellSome": "Annabel"
     }
 ]

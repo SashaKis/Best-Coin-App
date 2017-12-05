@@ -4,9 +4,9 @@
         "health": "4",
         "subjects": ["Math","Phisic","Logic","Tanah","Lashon"],
         "results":[],
-        "average":"0",
-        "goodDeeds": "goodDeeds",
-        "helpFamely": "helpFamely",
+        "average":"65",
+        "goodDeeds": ["goodDeeds1","goodDeeds2"],
+        "helpFamely": ["helpFamely1","helpFamely2"],
         "tellSome": "Lorem ipsum dolor sit amet, in est quando discere comprehensam, id habemus delicata has. Postulant vituperata at pro. Ius fuisset qualisque ex, at pro veri tacimates, ad eam nemore percipitur. Te quo ullum facilis, summo liber laoreet per cu. Sed nibh sanctus an, meis volumus mnesarchum no vis, qui pertinax mandamus perpetua no."
     }
 ]

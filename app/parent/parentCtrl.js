@@ -31,13 +31,21 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
             default:
             $scope.kidReportfile ="No Report data file"
         }
-        $log.log($scope.kidReportfile)
+       //$log.log($scope.kidReportfile)
         $http.get($scope.kidReportfile).then(function (response) { 
             $scope.kidReport = response.data;
-            $log.log($scope.kidReport);
+            //$log.log($scope.kidReport);
            $scope.kidmood = $scope.kidReport[$scope.kidReport.length - 1].mood;
            //$log.log($scope.kidmood);
            $scope.kidhealth = $scope.kidReport[$scope.kidReport.length - 1].health;
+           $scope.subjects = $scope.kidReport[$scope.kidReport.length - 1].subjects;
+           //$log.log($scope.subjects)
+           $scope.average = $scope.kidReport[$scope.kidReport.length - 1].average;
+           $scope.goodDeeds = $scope.kidReport[$scope.kidReport.length - 1].goodDeeds;
+           //$log.log($scope.goodDeeds)
+           $scope.helpFamely = $scope.kidReport[$scope.kidReport.length - 1].helpFamely;
+           //$log.log($scope.helpFamely)
+           $scope.tellSome = $scope.kidReport[$scope.kidReport.length - 1].tellSome;
         }); 
     }
 

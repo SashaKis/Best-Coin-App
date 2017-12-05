@@ -55,7 +55,9 @@
                     </div>
 
                     <div class="col-sm-12">
-                        <p><br></p>
+                        <p>
+                            <br>
+                        </p>
                         <button type="button" class="btn btn-primary" ng-click="sendData()">Send</button>
                     </div>
                 </form>
@@ -66,20 +68,14 @@
             <div class="col-sm-6">
                 <label class="control-label col-sm-4" for="goods">Your Good Deeds:</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="goods">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+                    <select class="form-control" id="goods" ng-model="selectedGoods">
+                        <option ng-repeat="good in goodDeeds">{{good}}</option>
                     </select>
                 </div>
                 <label class="control-label col-sm-4" for="type">Your help to famely:</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="help2famely">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+                    <select class="form-control" id="help2famely" ng-model="selectedHelp">
+                        <option ng-repeat="fhelp in helpFamely">{{fhelp}}</option>
                     </select>
                 </div>
                 <div class="col-sm-1"></div>

@@ -23,12 +23,57 @@
                     <label class="control-label" for="mymood">Mood :</label>
                     <input type="number" class="form-control" id="mymood" value="{{kidmood}}">
                 </div>
-                
+
                 <div class="form-group col-sm-6">
                     <label class="control-label" for="myhealth">Health :</label>
                     <input type="number" class="form-control" id="myhealth" value="{{kidhealth}}">
                 </div>
             </fieldset>
+            <p>
+                <br>
+            </p>
+            <fieldset>
+                <legend>School Results</legend>
+                <div class="col-sm-6">
+                    <p>
+                        <br>
+                    </p>
+                    <label class="control-label col-sm-3" for="achievements">Subjects:</label>
+                    <select class="form-control col-sm-6" id="achievements" ng-model="selectedLesson">
+                        <option ng-repeat="subj in subjects">{{subj}}</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label class="control-label" for="score">Results:</label>
+                    <input type="number" class="form-control" id="score" ng-model="score">
+                </div>
+                <div class="col-sm-3">
+                    <label class="control-label" for="avg">Average:</label>
+                    <input type="number" class="form-control" id="avg" value={{average}} ng-model="avg.value">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Famely Goods</legend>
+                <div class="col-sm-6">
+                        <label class="control-label" for="goodDeed">Good Deeds:</label>
+                        <select class="form-control" id="goodDeed" ng-model="selectedGoodDeed">
+                            <option ng-repeat="goodDeed in goodDeeds">{{goodDeed}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                            <label class="control-label" for="fhelp">Famely Help:</label>
+                            <select class="form-control" id="fhelp" ng-model="selectedFamelyHelps">
+                                <option ng-repeat="fhelp in helpFamely">{{fhelp}}</option>
+                            </select>
+                        </div>
+            </fieldset>
+            <!-- <div class="col-sm-1"></div> -->
+            <form class="col-sm-11">
+                <h3>What  {{selectedName}} tell us</h3>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" cols="70" maxlength="350" id="comment">{{tellSome}}</textarea>
+                </div>
+            </form>
         </form>
 
 
