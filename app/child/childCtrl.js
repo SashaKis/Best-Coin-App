@@ -1,4 +1,4 @@
-bestCoinApp.controller("ChildCtrl", function ($scope,$timeout, $http, $location, $log, activeUser, Report, children) {
+bestCoinApp.controller("ChildCtrl", function ($scope, $timeout, $http, $location, $log, activeUser, Report, children) {
     //http call to get data from json
     if (!activeUser.isLoggedIn()) {
         $location.path("/");
@@ -16,29 +16,19 @@ bestCoinApp.controller("ChildCtrl", function ($scope,$timeout, $http, $location,
         //$log.log(children.getAll());
         $scope.childArr = children.getAll();
         $scope.childmood = $scope.childArr[$scope.childArr.length - 1].mood;
-        //$log.log($scope.childmood);
         $scope.childhealth = $scope.childArr[$scope.childArr.length - 1].health;
-        //$log.log($scope.childhealth);
         $scope.goodDeeds = $scope.childArr[$scope.childArr.length - 1].goodDeeds;
-        //$log.log($scope.subjects);
         $scope.helpFamely = $scope.childArr[$scope.childArr.length - 1].helpFamely;
+        $scope.subjects = $scope.childArr[$scope.childArr.length - 1].subjects;
+        $scope.tellSome = $scope.childArr[$scope.childArr.length - 1].tellSome;
         //$log.log($scope.subjects);
     });
-
-
-    
- 
-
-    //$index = 1;  
-    /*
     $scope.sliderMood = document.getElementById("myMood");
     $scope.outputMood = document.getElementById("childmood");
     $scope.outputMood.innerHTML = $scope.sliderMood.value;
     $scope.sliderMood.oninput = function () {
         $scope.outputMood.innerHTML = this.value;
     }
-    */
-
 
     $scope.slider = document.getElementById("myhealth");
     $scope.output = document.getElementById("childhealth");
@@ -47,13 +37,6 @@ bestCoinApp.controller("ChildCtrl", function ($scope,$timeout, $http, $location,
     $scope.slider.oninput = function () {
         $scope.output.innerHTML = this.value;
     }
-    $scope.kidData = [];
-    $scope.sendData = function () {
-        children.addReport(new Report($scope.childmood, $scope.childhealth, $scope.average));
-        $scope.childArr = children.getAll();
-        $log.log($scope.childArr)
-    }
-
 
     $scope.result = {};
     $scope.sub_score = function () {
@@ -76,6 +59,25 @@ bestCoinApp.controller("ChildCtrl", function ($scope,$timeout, $http, $location,
         }
 
     };
-
-
+    //$scope.isSendClose = false;
+   
+    $scope.sendData = function () {
+        //Make new object for save
+        var newReport = {
+            mood: $scope.childmood,
+            health: $scope.childhealth,
+            subjects: $scope.subjects,
+            results: $scope.results,
+            average: $scope.average,
+            goodDeeds: $scope.goodDeeds,
+            helpFamely: $scope.helpFamely,
+            tellSome: $scope.tellSome,
+            imgURL: $scope.imgURL
+        };
+        children.addReport(new Report(newReport));
+        $scope.childArr = children.getAll();
+        //$scope.isSendClose = true;
+        alert(" Thank You to send weekly data")
+        $log.log($scope.childArr);
+    }
 });

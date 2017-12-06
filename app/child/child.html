@@ -14,7 +14,7 @@
                 <!--Slider mood-->
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myMood">Your mood:</label>
-                    <input type="range" min="0" max="10" value={{childmood}} class="slider" id="myMood">
+                    <input type="range" min="0" max="10" value={ {childmood}} class="slider" id="myMood">
                     <p>Value:
                         <span id="childmood">{{childmood}}</span>
                     </p>
@@ -22,7 +22,7 @@
                 <!--Slider health-->
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myhealth">Your health:</label>
-                    <input type="range" min="0" max="10" value={{childhealth}} class="slider" id="myhealth">
+                    <input type="range" min="0" max="10" value={ {childhealth}} class="slider" id="myhealth">
                     <p>Value:
                         <span id="childhealth">{{childhealth}}</span>
                     </p>
@@ -60,6 +60,11 @@
                             <br>
                         </p>
                         <button type="button" class="btn btn-primary" ng-click="sendData()">Send</button>
+                       
+                        <div class="alert alert-success alert-dismissable fade in" ng-show="isSendClose">
+                            <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>SuccessSend data!</strong> Thanks to send weekly data
+                        </div>
                     </div>
                 </form>
             </div>
@@ -69,13 +74,13 @@
             <div class="col-sm-6">
                 <label class="control-label col-sm-4" for="goods">Your Good Deeds:</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="goods" ng-model="selectedGoods">
+                    <select multiple class="form-control" id="goods" ng-model="selectedGoods">
                         <option ng-repeat="good in goodDeeds">{{good}}</option>
                     </select>
                 </div>
                 <label class="control-label col-sm-4" for="type">Your help to famely:</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="help2famely" ng-model="selectedHelp">
+                    <select multiple class="form-control" id="help2famely" ng-model="selectedHelp">
                         <option ng-repeat="fhelp in helpFamely">{{fhelp}}</option>
                     </select>
                 </div>
@@ -83,15 +88,13 @@
                 <form class="col-sm-11">
                     <h3>Do you want to tell us something?</h3>
                     <div class="form-group">
-                        <textarea class="form-control" rows="5" cols="30" maxlength="150" id="comment"></textarea>
+                        <textarea class="form-control" rows="5" cols="30" maxlength="150" id="comment" ng-model="tellSome"></textarea>
                     </div>
                     <div>
                         <legend>Add new Picture</legend>
                         <img class="img-responsive center-block" src="css/img/photocamera.png" alt="Lior Picture" width="150" height="200">
                     </div>
                 </form>
-
-
             </div>
         </div>
     </form>
