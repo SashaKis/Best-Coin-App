@@ -84,9 +84,16 @@
         <form>
             <fieldset>
                 <legend>Weekly Winner</legend>
-                <input type="radio" name="weekWinner" ng-model="weekWinner" ng-value="0">Lior</input>
-                <input type="radio" name="weekWinner" ng-model="weekWinner" ng-value="1">Annabel</input>
-                <br>
+                <form>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="weekWinner" ng-model="weekWinner" ng-value="0" ng-change="radioWinner()">Lior</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="weekWinner" ng-model="weekWinner" ng-value="1" ng-change="radioWinner()">Annabel</label>
+                    </div>
+                </form>
             </fieldset>
         </form>
     </aside>

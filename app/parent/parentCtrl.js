@@ -1,4 +1,4 @@
-bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, activeUser, Report, children) {
+bestCoinApp.controller("ParentCtrl", function ($rootScope, $scope, $http, $log, $location, activeUser, Report, children) {
     //http call to get data from json
     if (!activeUser.isLoggedIn()) {
         $location.path("/");
@@ -47,7 +47,24 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
         //$scope.x = $scope.selectedLesson.$index;
         //$scope.x = document.getElementById("achievements").options.selectedIndex;
         $scope.x = $scope.selectedLesson;
-        $scope.score =  $scope.results[$scope.x];
+        $scope.score = $scope.results[$scope.x];
         // $log.log($scope.x);
     }
+
+    $scope.radioWinner = function () {
+        $log.log($scope.weekWinner);
+        switch ($scope.weekWinner) {
+            case 0:
+                $rootScope.WinnerName = "Lior"
+                break;
+            case 1:
+                $rootScope.WinnerName = "Annabel"
+                break;
+            default:
+                break;
+        }
+    }
+
+
+
 });
