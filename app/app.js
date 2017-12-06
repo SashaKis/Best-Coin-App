@@ -26,8 +26,8 @@ bestCoinApp.config(function ($routeProvider) {
             //controller: "ChildCtrl"
         })
         .when("/news", {
-            templateUrl: "app/news/news.html"
-            //controller: "ChildCtrl"
+            templateUrl: "app/news/news.html",
+            controller: "NewsCtrl"
         })
         .when("/winner", {
             templateUrl: "app/winner/winner.html"

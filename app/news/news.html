@@ -2,26 +2,15 @@
 
 <div class="container">
     <div class="page-header">
-        <h1>{{childName}}'s Page</h1>
+        <h1>Famely News and Plans</h1>
     </div>
-    <h2>News topic</h2>
-    <div class="well col-sm-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare lobortis euismod. Sed felis ante, condimentum
-            at tortor in, lobortis maximus lectus. Nam non efficitur orci. Donec odio tellus, vestibulum sed lectus nec,
-            euismod vestibulum enim. Nullam ultrices ac lorem in gravida. Vivamus ac vestibulum metus, ac rutrum ligula.
-            Donec vulputate elit in aliquet auctor. Integer vitae sapien nibh. Suspendisse blandit condimentum ultricies.
-            Nam dolor nunc</p>
-    </div>
-    <h2>News topic</h2>
-    <div class="well col-sm-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare lobortis euismod. Sed felis ante, condimentum
-            at tortor in, lobortis maximus lectus. Nam non efficitur orci. Donec odio tellus, vestibulum sed lectus nec,
-            euismod vestibulum enim. Nullam ultrices ac lorem in gravida. Vivamus ac vestibulum metus, ac rutrum ligula.
-            Donec vulputate elit in aliquet auctor. Integer vitae sapien nibh. Suspendisse blandit condimentum ultricies.
-            Nam dolor nunc</p>
-    </div>
-
-
-
-
- </div>
+    <ul class="list-group">
+        <li class="list-group-item well col-sm-12" ng-repeat="new in newsArr">
+            <fieldset>
+                <legend>{{new.topic}}</legend>
+                <img class="col-sm-2" src="{{new.imageURL}}" class="img-responsive" alt="Image">
+                <h3 class="col-sm-10">{{new.content}}</h3>
+            </fieldset>
+        </li>
+    </ul>
+</div>
