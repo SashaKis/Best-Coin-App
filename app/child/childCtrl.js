@@ -1,4 +1,4 @@
-bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, activeUser, Report, children) {
+bestCoinApp.controller("ChildCtrl", function ($scope,$timeout, $http, $location, $log, activeUser, Report, children) {
     //http call to get data from json
     if (!activeUser.isLoggedIn()) {
         $location.path("/");
@@ -16,6 +16,10 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
         //$log.log(children.getAll());
         $scope.childArr = children.getAll();
         $scope.childmood = $scope.childArr[$scope.childArr.length - 1].mood;
+
+        $timeout(function() {
+            $scope.childmood = $scope.childArr[$scope.childArr.length - 1].mood;
+        });
         //$log.log($scope.childmood);
         $scope.childhealth = $scope.childArr[$scope.childArr.length - 1].health;
         //$log.log($scope.childhealth);
@@ -24,14 +28,19 @@ bestCoinApp.controller("ChildCtrl", function ($scope, $http, $location, $log, ac
     });
 
 
+    
+ 
 
     //$index = 1;  
+    /*
     $scope.sliderMood = document.getElementById("myMood");
     $scope.outputMood = document.getElementById("childmood");
     $scope.outputMood.innerHTML = $scope.sliderMood.value;
     $scope.sliderMood.oninput = function () {
         $scope.outputMood.innerHTML = this.value;
     }
+    */
+
 
     $scope.slider = document.getElementById("myhealth");
     $scope.output = document.getElementById("childhealth");

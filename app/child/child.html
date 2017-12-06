@@ -14,7 +14,7 @@
                 <!--Slider mood-->
                 <div id="slidecontainer form-group col-sm-6">
                     <label class="control-label col-sm-4" for="myMood">Your mood:</label>
-                    <input type="range" min="0" max="10" value={{childmood}} class="slider" id="myMood">
+                    <input type="range" min="0" max="10" ng-model="childmood" class="slider" id="myMood">
                     <p>Value:
                         <span id="childmood">{{childmood}}</span>
                     </p>
