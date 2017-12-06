@@ -35,7 +35,7 @@
                         <div class="col-sm-6">
                             <label class="control-label" for="achievements">Achievements:</label>
                             <select class="form-control" id="achievements" ng-change="subj_change()" ng-model="selectedLesson">
-                            <!-- ng-options="subjects.indexOf(selectedLesson) as selectedLesson for selectedLesson in subjects" -->
+                                <!-- ng-options="subjects.indexOf(selectedLesson) as selectedLesson for selectedLesson in subjects" -->
                                 <option ng-repeat="subj in subjects">{{subj}}</option>
                             </select>
                         </div>
@@ -85,12 +85,13 @@
                     <div class="form-group">
                         <textarea class="form-control" rows="5" cols="30" maxlength="150" id="comment"></textarea>
                     </div>
+                    <div>
+                        <legend>Add new Picture</legend>
+                        <img class="img-responsive center-block" src="css/img/photocamera.png" alt="Lior Picture" width="150" height="200">
+                    </div>
                 </form>
 
-                <div>
-                    <legend>Add new Picture</legend>
-                    <img class="img-responsive center-block" src="css/img/photocamera.png" alt="Lior Picture" width="150" height="200">
-                </div>
+
             </div>
         </div>
     </form>
