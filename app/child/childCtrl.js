@@ -16,14 +16,12 @@ bestCoinApp.controller("ChildCtrl", function ($scope,$timeout, $http, $location,
         //$log.log(children.getAll());
         $scope.childArr = children.getAll();
         $scope.childmood = $scope.childArr[$scope.childArr.length - 1].mood;
-
-        $timeout(function() {
-            $scope.childmood = $scope.childArr[$scope.childArr.length - 1].mood;
-        });
         //$log.log($scope.childmood);
         $scope.childhealth = $scope.childArr[$scope.childArr.length - 1].health;
         //$log.log($scope.childhealth);
-        $scope.subjects = $scope.childArr[$scope.childArr.length - 1].subjects;
+        $scope.goodDeeds = $scope.childArr[$scope.childArr.length - 1].goodDeeds;
+        //$log.log($scope.subjects);
+        $scope.helpFamely = $scope.childArr[$scope.childArr.length - 1].helpFamely;
         //$log.log($scope.subjects);
     });
 
