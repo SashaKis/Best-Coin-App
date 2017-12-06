@@ -49,6 +49,5 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
         $scope.x = $scope.selectedLesson;
         $scope.score =  $scope.results[$scope.x];
         // $log.log($scope.x);
-        // $log.log($scope.results[$scope.x]);
-     }
+    }
 });
