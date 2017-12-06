@@ -35,6 +35,7 @@
                         <div class="col-sm-6">
                             <label class="control-label" for="achievements">Achievements:</label>
                             <select class="form-control" id="achievements" ng-change="subj_change()" ng-model="selectedLesson">
+                            <!-- ng-options="subjects.indexOf(selectedLesson) as selectedLesson for selectedLesson in subjects" -->
                                 <option ng-repeat="subj in subjects">{{subj}}</option>
                             </select>
                         </div>

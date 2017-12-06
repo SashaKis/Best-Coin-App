@@ -46,9 +46,9 @@ bestCoinApp.controller("ParentCtrl", function ($scope, $http, $log, $location, a
     $scope.subjectChange = function () {
         //$scope.x = $scope.selectedLesson.$index;
         //$scope.x = document.getElementById("achievements").options.selectedIndex;
-        $scope.x = $scope.selectedLesson.options;
-        //$scope.score =  $scope.kidReport[$scope.x].results;
-        $log.log($scope.x);
-        $log.log($scope.score);
-    }
+        $scope.x = $scope.selectedLesson;
+        $scope.score =  $scope.results[$scope.x];
+        // $log.log($scope.x);
+        // $log.log($scope.results[$scope.x]);
+     }
 });
