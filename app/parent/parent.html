@@ -56,13 +56,13 @@
                 <legend>Famely Goods</legend>
                 <div class="col-sm-6">
                     <label class="control-label" for="goodDeed">Good Deeds:</label>
-                    <select class="form-control" id="goodDeed" ng-model="selectedGoodDeed">
+                    <select multiple class="form-control" id="goodDeed" ng-model="selectedGoodDeed">
                         <option ng-repeat="goodDeed in goodDeeds">{{goodDeed}}</option>
                     </select>
                 </div>
                 <div class="col-sm-6">
                     <label class="control-label" for="fhelp">Famely Help:</label>
-                    <select class="form-control" id="fhelp" ng-model="selectedFamelyHelps">
+                    <select multiple class="form-control" id="fhelp" ng-model="selectedFamelyHelps">
                         <option ng-repeat="fhelp in helpFamely">{{fhelp}}</option>
                     </select>
                 </div>
